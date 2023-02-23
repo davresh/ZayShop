@@ -125,7 +125,7 @@ function creatBlock(arr,you,block){
             })
             backHover.append(likeIcon);
             let href = document.createElement('a');
-            href.href = '../single/single.html';
+            href.href = '.single.html';
             let faEye = document.createElement('i');
             faEye.className = 'fa-regular fa-eye' ;
             href.append(faEye);
