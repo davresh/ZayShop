@@ -1,0 +1,476 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.3s;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container .contact {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: white;
+  background-color: #212934;
+  padding: 10px 7%;
+}
+.container .contact .block, .container .contact .block-right {
+  width: 50%;
+  display: flex;
+  justify-content: left;
+}
+.container .contact .block i, .container .contact .block-right i {
+  font-size: 14px;
+}
+.container .contact .block a, .container .contact .block-right a {
+  margin: 0 1%;
+  text-decoration: none;
+  color: snow;
+  font-size: 14px;
+}
+.container .contact .block-right {
+  justify-content: right;
+}
+.container .contact .block-right i {
+  font-size: 14px;
+  margin-left: 1%;
+  cursor: pointer;
+}
+@media screen and (max-width: 993px) {
+  .container .contact {
+    display: none;
+  }
+}
+.container header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: hidden;
+  align-items: center;
+  padding: 20px 7%;
+  background-color: white;
+  z-index: 1;
+  box-shadow: 0px 9px 11px 1px #cababa;
+}
+.container header .left {
+  width: 15%;
+  display: flex;
+  justify-content: left;
+}
+.container header .left h1 {
+  font-size: 45px;
+  color: #59AB6E;
+  cursor: pointer;
+}
+.container header .left i {
+  color: #ccc;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+.container header .center {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+.container header .center a {
+  width: 15%;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+.container header .center a:hover {
+  color: #59AB6E;
+}
+.container header .right {
+  width: 15%;
+  display: flex;
+  justify-content: right;
+}
+.container header .right .magnifying input {
+  display: none;
+}
+.container header .right i {
+  font-size: 19px;
+  margin-left: 10%;
+  cursor: pointer;
+  position: relative;
+}
+.container header .right i p {
+  font-size: 14px;
+  border-radius: 40%;
+  padding: 3px 5px;
+  background-color: #E9EEF5;
+  position: absolute;
+  top: -10px;
+  left: 8px;
+}
+@media screen and (max-width: 993px) {
+  .container header {
+    height: 85px;
+  }
+  .container header .left {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container header .left i {
+    display: block;
+  }
+  .container header .center {
+    width: 100%;
+    flex-direction: column;
+  }
+  .container header .center a {
+    padding: 10px 0;
+  }
+  .container header .right {
+    width: 100%;
+    align-items: center;
+    margin-top: 15px;
+  }
+  .container header .right .magnifying {
+    display: flex;
+    width: 95%;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #E9EEF5;
+  }
+  .container header .right .magnifying input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: 0;
+    padding: 11px 3px;
+    border-radius: 5px;
+  }
+  .container header .right .magnifying i {
+    width: 5%;
+  }
+  .container header .right i {
+    margin-left: 0;
+    margin: 0 5px;
+  }
+}
+.container .slider {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #EFEFEF;
+  padding: 40px 10%;
+  position: relative;
+}
+.container .slider .text {
+  width: 50%;
+}
+.container .slider .text h1 {
+  font-size: 50px;
+  color: #59AB6E;
+}
+.container .slider .text h2 {
+  font-size: 25px;
+  margin: 10px 0;
+  font-weight: 500;
+}
+.container .slider .text p {
+  font-size: 18px;
+  line-height: 30px;
+}
+.container .slider .text p a {
+  color: #59AB6E;
+}
+.container .slider .Photo {
+  width: 50%;
+}
+.container .slider .Photo img {
+  width: 100%;
+}
+.container .slider .slider-left-click, .container .slider .slider-right-click {
+  color: #59AB6E;
+  opacity: 0.7;
+  font-size: 50px;
+  position: absolute;
+  left: 20px;
+  cursor: pointer;
+}
+.container .slider .slider-left-click:hover, .container .slider .slider-right-click:hover {
+  opacity: 1;
+}
+.container .slider .slider-right-click {
+  left: calc(100% - 46px);
+}
+.container .slider .listSlide {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 50px);
+  z-index: 1;
+}
+.container .slider .listSlide div {
+  width: 30%;
+  height: 5px;
+  background-color: #59AB6E;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.container .slider .listSlide .useIs {
+  opacity: 1;
+}
+@media screen and (max-width: 993px) {
+  .container .slider {
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding-bottom: 70px;
+  }
+  .container .slider .text {
+    width: 80%;
+  }
+  .container .slider .listSlide {
+    bottom: 30px;
+  }
+}
+.container .ListSite {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 70px 7%;
+}
+.container .ListSite .Categories {
+  width: 50%;
+  text-align: center;
+}
+.container .ListSite .Categories h1 {
+  font-size: 40px;
+  font-weight: 500;
+}
+.container .ListSite .Categories p {
+  font-size: 18px;
+}
+.container .ListSite .products, .container .ListSite .FeaturedProduct {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 70px;
+}
+.container .ListSite .products .product, .container .ListSite .FeaturedProduct .product {
+  width: 27%;
+  text-align: center;
+  padding: 10px 0;
+}
+.container .ListSite .products .product img, .container .ListSite .FeaturedProduct .product img {
+  width: 100%;
+  border-radius: 50%;
+}
+.container .ListSite .products .product figcaption, .container .ListSite .FeaturedProduct .product figcaption {
+  width: 100%;
+}
+.container .ListSite .products .product figcaption h1, .container .ListSite .FeaturedProduct .product figcaption h1 {
+  margin: 15px 0;
+}
+.container .ListSite .products .product figcaption a, .container .ListSite .FeaturedProduct .product figcaption a {
+  color: white;
+  background-color: #59AB6E;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container .ListSite .FeaturedProduct {
+  align-items: center;
+}
+.container .ListSite .FeaturedProduct .Featured {
+  width: 32%;
+  text-align: left;
+  box-shadow: 0 0 5px 1px #ccc;
+}
+.container .ListSite .FeaturedProduct .Featured img {
+  width: 100%;
+}
+.container .ListSite .FeaturedProduct .Featured figcaption {
+  width: 100%;
+  height: 230px;
+  background-color: white;
+  padding: 15px 10px;
+}
+.container .ListSite .FeaturedProduct .Featured figcaption .raiting {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.container .ListSite .FeaturedProduct .Featured figcaption .raiting div {
+  width: 50%;
+}
+.container .ListSite .FeaturedProduct .Featured figcaption .raiting .star {
+  text-align: left;
+}
+.container .ListSite .FeaturedProduct .Featured figcaption .raiting .star .fa-solid {
+  color: #EDE861;
+}
+.container .ListSite .FeaturedProduct .Featured figcaption .raiting .many {
+  text-align: right;
+  color: #ccc;
+}
+.container .ListSite .FeaturedProduct .Featured figcaption h1 {
+  font-size: 25px;
+  margin: 5px 0;
+  font-weight: 500;
+}
+.container .ListSite .FeaturedProduct .Featured figcaption h3 {
+  color: #ccc;
+  margin: 15px 0;
+}
+@media screen and (max-width: 993px) {
+  .container .ListSite .Categories {
+    width: 100%;
+  }
+  .container .ListSite .products .product, .container .ListSite .FeaturedProduct .product {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container .ListSite .products, .container .ListSite .FeaturedProduct {
+    justify-content: center;
+  }
+  .container .ListSite .products .product, .container .ListSite .FeaturedProduct .product {
+    width: 85%;
+  }
+  .container .ListSite .FeaturedProduct .Featured {
+    width: 85%;
+    margin-bottom: 20px;
+  }
+}
+.container .backListColor {
+  background-color: #E9EEF5;
+}
+.container footer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 7% 0 7%;
+  background-color: #212934;
+}
+.container footer .information {
+  width: 32%;
+  color: white;
+}
+.container footer .information h1 {
+  padding-bottom: 15px;
+  font-size: 25px;
+  font-weight: 300;
+  border-bottom: 1px solid #2D343F;
+}
+.container footer .information .logo {
+  color: #59AB6E;
+}
+.container footer .information p {
+  font-size: 17px;
+  margin: 13px 0;
+}
+.container footer .information p i {
+  margin-right: 7px;
+}
+.container footer .information p a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+.container footer .information p a:hover {
+  color: #59AB6E;
+}
+.container footer .social {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: white;
+  padding: 30px 0;
+  border-top: 1px solid #2D343F;
+}
+.container footer .social .socSite {
+  width: 50%;
+}
+.container footer .social .socSite i {
+  font-size: 30px;
+  padding: 10px;
+  border: 1px solid #2D343F;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.4s;
+  margin-right: 10px;
+}
+.container footer .social .socSite i:hover {
+  color: #212934;
+  background-color: white;
+}
+.container footer .social .searchSite {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  align-items: center;
+}
+.container footer .social .searchSite input {
+  width: fit-content;
+  padding: 5px 0;
+  font-size: 18px;
+  outline: 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #212934;
+  border: 1px solid #2D343F;
+  color: white;
+}
+@media (max-width: 400px) {
+  .container footer .social .searchSite input .searchSite input {
+    width: 100%;
+  }
+}
+.container footer .social .searchSite p {
+  font-size: 18px;
+  padding: 6px 5px;
+  background-color: #59AB6E;
+  border-radius: 5px;
+}
+@media screen and (max-width: 767px) {
+  .container footer .information {
+    width: 100%;
+  }
+  .container footer .social .socSite {
+    width: 100%;
+  }
+  .container footer .social .searchSite {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+}
+.container .About {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  background-color: #1D242D;
+  padding: 30px 7%;
+}
+.container .About a {
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
